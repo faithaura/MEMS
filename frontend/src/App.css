@@ -1,0 +1,96 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: left;
+  background-color: #f5f7fa; /* soft hospital background */
+  color: #2E3A59; /* professional dark blue text */
+}
+
+body {
+  background-color: #f5f7fa;
+}
+
+.hospital-list {
+  margin-bottom: 2rem;
+}
+
+.hospital-card {
+  border: 2px solid #4CAF50;
+  background-color: #ffffff;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.hospital-card h4 {
+  color: #2E3A59;
+  margin-top: 0;
+}
+
+.hospital-card p {
+  color: #556B7F;
+  margin: 0.5rem 0;
+}
+
+.transfer-form {
+  border: 2px solid #4CAF50;
+  background-color: #ffffff;
+  padding: 1.5rem;
+  margin-top: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.transfer-form h3 {
+  color: #2E3A59;
+}
+
+.transfer-form p {
+  color: #556B7F;
+}
+
+.transfer-form input,
+.transfer-form select {
+  padding: 0.6rem;
+  color: #2E3A59;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.transfer-form button {
+  background-color: #4CAF50;
+  color: #ffffff;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  margin-top: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+
+.transfer-form button:hover {
+  background-color: #45a049;
+}
+
+.transfer-status {
+  background-color: #e8f5e9;
+  border: 2px solid #4CAF50;
+  padding: 1.5rem;
+  margin-top: 1.5rem;
+  border-radius: 8px;
+  color: #2E3A59;
+}
+
+.transfer-status h3 {
+  color: #2E3A59;
+  margin-top: 0;
+}
+
+.transfer-status p {
+  margin: 0.5rem 0;
+}
+
