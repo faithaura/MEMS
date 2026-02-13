@@ -1,0 +1,138 @@
+/* StatusBar.css */
+
+.status-bar {
+  background: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  margin: 0 2rem 0 2rem;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.status-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+}
+
+.status-item {
+  display: flex;
+  align-items: center;
+  padding: 1.5rem;
+  gap: 1rem;
+  border-right: 1px solid #e0e0e0;
+  transition: background 0.2s;
+}
+
+.status-item:last-child {
+  border-right: none;
+}
+
+.status-item:hover {
+  background: #f8f9fa;
+}
+
+.status-icon {
+  font-size: 2rem;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  flex-shrink: 0;
+}
+
+.status-icon.active {
+  background: linear-gradient(135deg, #ff4444 0%, #cc0000 100%);
+  animation: pulse-red 2s infinite;
+}
+
+.status-icon.available {
+  background: linear-gradient(135deg, #4caf50 0%, #2e7d32 100%);
+}
+
+.status-icon.time {
+  background: linear-gradient(135deg, #2196f3 0%, #1565c0 100%);
+}
+
+.status-icon.today {
+  background: linear-gradient(135deg, #ff9800 0%, #e65100 100%);
+}
+
+@keyframes pulse-red {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(255, 68, 68, 0.7);
+  }
+  50% {
+    box-shadow: 0 0 0 10px rgba(255, 68, 68, 0);
+  }
+}
+
+.status-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.status-label {
+  font-size: 0.85rem;
+  color: #666;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.status-value {
+  font-size: 1.8rem;
+  color: #222;
+  font-weight: 700;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .status-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .status-item:nth-child(2) {
+    border-right: none;
+  }
+
+  .status-item:nth-child(3) {
+    border-top: 1px solid #e0e0e0;
+  }
+
+  .status-item:nth-child(4) {
+    border-top: 1px solid #e0e0e0;
+  }
+}
+
+@media (max-width: 768px) {
+  .status-bar {
+    margin: 0 1rem 0 1rem;
+  }
+
+  .status-container {
+    grid-template-columns: 1fr;
+  }
+
+  .status-item {
+    border-right: none;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 1rem;
+  }
+
+  .status-item:last-child {
+    border-bottom: none;
+  }
+
+  .status-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+  }
+
+  .status-value {
+    font-size: 1.5rem;
+  }
+}

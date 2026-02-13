@@ -1,0 +1,101 @@
+/* PatientCare.css */
+
+.patient-care {
+  min-height: 200px;
+}
+
+.patient-care-header {
+  padding: 1rem 1.5rem;
+  background: #ef4444;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-weight: 600;
+}
+
+.alert-icon {
+  font-size: 1.3rem;
+}
+
+.patient-status {
+  flex: 1;
+  font-size: 0.95rem;
+  letter-spacing: 1px;
+}
+
+.request-id {
+  font-size: 0.9rem;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+}
+
+.patient-tabs {
+  display: flex;
+  background: #1a1f2e;
+  border-bottom: 1px solid #2a3142;
+}
+
+.patient-tab {
+  flex: 1;
+  padding: 0.75rem;
+  background: transparent;
+  border: none;
+  color: #9ca3af;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: all 0.2s;
+  border-bottom: 2px solid transparent;
+}
+
+.patient-tab.active {
+  color: white;
+  border-bottom-color: #ef4444;
+  background: #111827;
+}
+
+.patient-tab:hover:not(.active) {
+  background: #1f2937;
+}
+
+.patient-content {
+  padding: 1.5rem;
+}
+
+.patient-content label {
+  color: #cbd5e1;
+  display: block;
+  margin-bottom: 0.35rem;
+  font-size: 0.85rem;
+}
+
+.form-group,
+.vital-item {
+  margin-bottom: 1rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea,
+.vital-input {
+  width: 100%;
+  padding: 0.4rem 0.6rem;
+  border-radius: 6px;
+  border: 1px solid #374151;
+  background: #ffffff;
+  color: #111827;
+  font-size: 0.95rem;
+}
+
+.form-row {
+  display: flex;
+  gap: 1rem;
+}
+
+.patient-placeholder {
+  text-align: center;
+  color: #9ca3af;
+  font-size: 0.9rem;
+}

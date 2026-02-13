@@ -1,0 +1,200 @@
+/* NavigationMap.css */
+
+.navigation-map-container {
+  position: relative;
+  height: 500px;
+  width: 100%;
+  background: #000;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Next Maneuver Display */
+.next-maneuver {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: rgba(17, 24, 39, 0.95);
+  border: 1px solid #3b82f6;
+  border-radius: 12px;
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+}
+
+.maneuver-icon {
+  width: 50px;
+  height: 50px;
+  background: #3b82f6;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.arrow-up {
+  font-size: 2rem;
+  color: white;
+  font-weight: bold;
+}
+
+.maneuver-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.maneuver-label {
+  font-size: 0.7rem;
+  color: #60a5fa;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+.maneuver-instruction {
+  font-size: 1rem;
+  color: white;
+  font-weight: 600;
+}
+
+/* Destination Card */
+.destination-card {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: rgba(17, 24, 39, 0.95);
+  border: 1px solid #2a3142;
+  border-radius: 12px;
+  padding: 1rem;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+  min-width: 200px;
+}
+
+.destination-label {
+  font-size: 0.7rem;
+  color: #9ca3af;
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+}
+
+.destination-name {
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 0.75rem;
+}
+
+.destination-stats {
+  display: flex;
+  gap: 1rem;
+}
+
+.time-eta {
+  color: #10b981;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.distance-eta {
+  color: #9ca3af;
+  font-size: 0.9rem;
+}
+
+/* Speed Display */
+.speed-display {
+  position: absolute;
+  bottom: 80px;
+  left: 20px;
+  background: rgba(17, 24, 39, 0.95);
+  border: 2px solid #3b82f6;
+  border-radius: 12px;
+  padding: 1rem 1.5rem;
+  text-align: center;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+}
+
+.speed-value {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: white;
+  line-height: 1;
+}
+
+.speed-unit {
+  font-size: 0.9rem;
+  color: #9ca3af;
+  margin-bottom: 0.25rem;
+}
+
+.speed-label {
+  font-size: 0.75rem;
+  color: #60a5fa;
+  letter-spacing: 1px;
+}
+
+/* Center Map Button */
+.center-map-btn {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 50px;
+  background: #3b82f6;
+  border: none;
+  border-radius: 50%;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+  transition: all 0.2s;
+}
+
+.center-map-btn:hover {
+  background: #2563eb;
+  transform: translateX(-50%) scale(1.1);
+}
+
+/* Leaflet overrides for dark theme */
+.leaflet-container {
+  background: #000;
+}
+
+.leaflet-popup-content-wrapper {
+  background: #111827;
+  color: white;
+  border: 1px solid #2a3142;
+}
+
+.leaflet-popup-tip {
+  background: #111827;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .next-maneuver,
+  .destination-card {
+    padding: 0.75rem;
+  }
+
+  .maneuver-instruction {
+    font-size: 0.85rem;
+  }
+
+  .speed-display {
+    padding: 0.75rem 1rem;
+  }
+
+  .speed-value {
+    font-size: 2rem;
+  }
+}
